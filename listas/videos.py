@@ -58,7 +58,8 @@ def es_diptongo (palabra):
     condicion = False
     indice = 0
     while not condicion and indice < len(palabra) - 1:
-        if (palabra[indice] in v_a and palabra[indice + 1] in v_c) or (palabra[indice] in v_c and palabra[indice+1] in v_c):
+        if (palabra[indice] in v_a and palabra[indice + 1] in v_c) or (palabra[indice] in v_c and palabra[indice+1] in v_c) or \
+        (palabra[indice] in v_c and palabra[indice + 1] in v_a):
             condicion = True
         indice += 1
     return condicion

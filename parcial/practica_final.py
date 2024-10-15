@@ -131,3 +131,20 @@ def listar_mayor_a_menor(dicc):
 lista = [ ['Luisa', 4], ['Mariano', 10], ['Luisa', 5]]
 
 listar_mayor_a_menor(procesar_lista(lista))
+
+def numeros_al_cuadrado(n):
+    return {i: i**2 for i in range(1, n+1)}
+def mezclar_diccionarios(dicc_1, dicc_2):
+    dicc_mezclado = dicc_1.copy()
+    for clave, valor in dicc_2.items():
+        if clave in dicc_mezclado:
+            dicc_mezclado[clave] += valor
+        else:
+            dicc_mezclado[clave] = valor
+    return dicc_mezclado
+def filtrar_por_sumar_diez(dicc):
+    return {k: v for k, v in dicc.items() if k + v >= 10}
+
+def ordenar_valores_por_longitud(dicc):
+    return sorted(dicc.values(), key=len, reverse=True)
+
